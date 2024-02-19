@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -95,6 +96,18 @@ fun LemonApp() {
                 }
             }
             3->{}
+        }
+    }
+}
+
+@Composable
+fun WelcomeScreen(name: String, onStartClicked: () -> Unit) {
+    Column {
+        Text(text = "Welcome $name!")
+        Button(
+            onClick = onStartClicked
+        ) {
+            Text("Start")
         }
     }
 }
